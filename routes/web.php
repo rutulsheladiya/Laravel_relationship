@@ -7,6 +7,8 @@ use App\Http\Controllers\MobileController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\StoryController;
+use App\Http\Controllers\TagController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +38,10 @@ Route::get('getorder/{supplierId}',[SupplierController::class,'orderDetail']);
 
 // hasmanythrough
 Route::get('getcomment',[AdminController::class,'getComment']);
+
+
+// many to many relationship
+Route::get('addStory',[StoryController::class,'InsertStory']);
+Route::get('addTag',[TagController::class,'InsertTag']);
+Route::get('attachTag',[StoryController::class,'attachTag']);
+Route::get('getTag',[StoryController::class,'getTag']);
