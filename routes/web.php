@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\MobileController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SupplierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,6 @@ Route::get('showcustomer/{id}',[MobileController::class,'showcustomer']);
 Route::get('add-author',[AuthorController::class,'add_author']);
 Route::get('getpost/{id}',[AuthorController::class,'getpost']);
 Route::get('getauthor/{id}',[PostController::class,'findauthor']);
+
+// hasonethrough()
+Route::get('getorder/{supplierId}',[SupplierController::class,'orderDetail']);
