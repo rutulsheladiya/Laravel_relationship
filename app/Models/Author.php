@@ -11,6 +11,6 @@ class Author extends Model
 
     protected $primaryKey = "author_id";
     public function post(){
-        return $this->hasMany(Post::class, "author_id", "author_id");
+        return $this->hasMany(Post::class, "author_id");
     }
 }
