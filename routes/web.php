@@ -1,12 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\MobileController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SupplierController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +33,6 @@ Route::get('getauthor/{id}',[PostController::class,'findauthor']);
 
 // hasonethrough()
 Route::get('getorder/{supplierId}',[SupplierController::class,'orderDetail']);
+
+// hasmanythrough
+Route::get('getcomment',[AdminController::class,'getComment']);
