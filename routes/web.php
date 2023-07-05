@@ -11,6 +11,7 @@ use App\Http\Controllers\StoryController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\SingerController;
+use App\Http\Controllers\User1t1pController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +55,13 @@ Route::get('addsinger',[SingerController::class,'InsertSinger']);
 Route::get('find_singer_song',[SingerController::class,'FindSingerSong'])->name('findsong');
 
 Route::get('findsingerfromsong',[SongController::class,'Find_Singer']);
+
+
+
+// polymorphhic relationship
+// one to one
+Route::get('findImageOfUser',[User1t1pController::class,'findImageOfUser']);
+Route::get('findImageOfPost',[User1t1pController::class,'findImageOfPost']);
+
+// one to one reverse Morphto() find user and post from image table
+Route::get('FindUserFromImage',[User1t1pController::class,'FindUserFromImage']);
