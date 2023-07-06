@@ -31,6 +31,8 @@ Route::get('/', function () {
 Route::get('add-data',[CustomerController::class,'add_customer']);
 Route::get('showmobile/{id}',[CustomerController::class,'showmobile']);
 Route::get('showcustomer/{id}',[MobileController::class,'showcustomer']);
+// eager loading and lazy loading
+Route::get('allMobile',[CustomerController::class,'allMobile']);
 
 // one to many relationship
 Route::get('add-author',[AuthorController::class,'add_author']);
@@ -65,7 +67,7 @@ Route::get('findImageOfUser',[User1t1pController::class,'findImageOfUser']);
 Route::get('findImageOfPost',[User1t1pController::class,'findImageOfPost']);
 
 // one to one reverse Morphto() find user and post from image table
-Route::get('FindUserFromImage',[User1t1pController::class,'FindUserFromImage']);
+Route::get('FindUserFromImage',[User1t1pController::class,'Fin  `dUserFromImage']);
 
 
 // polymorphic one to many relationship

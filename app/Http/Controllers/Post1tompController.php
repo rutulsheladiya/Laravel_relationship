@@ -10,11 +10,12 @@ class Post1tompController extends Controller
 {
     function findPostComment()
     {
-        $postId = Post1tomp::find(1);
+        $postId = Post1tomp::find(3);
         //   dump($postId->toArray());
         // dump($postId->comment->toArray());
 
-        dump($postId->load('comment')->toArray());
+        // dump($postId->load('comment')->toArray());
+        dump($postId->doesntHave('comment')->get()->toArray());
     }
 
     function findVideoComment(){

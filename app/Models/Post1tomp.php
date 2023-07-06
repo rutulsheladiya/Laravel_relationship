@@ -11,5 +11,7 @@ class Post1tomp extends Model
     function comment()
     {
         return $this->morphMany(Comment1tomp::class, 'commentable');
+        // latest of many
+        // return $this->morphone(Comment1tomp::class, 'commentable')->latestOfMany();
     }
 }
