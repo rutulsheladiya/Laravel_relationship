@@ -12,6 +12,7 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\SingerController;
 use App\Http\Controllers\User1t1pController;
+use App\Http\Controllers\Post1tompController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,3 +66,8 @@ Route::get('findImageOfPost',[User1t1pController::class,'findImageOfPost']);
 
 // one to one reverse Morphto() find user and post from image table
 Route::get('FindUserFromImage',[User1t1pController::class,'FindUserFromImage']);
+
+
+// polymorphic one to many relationship
+Route::get('findPostComment',[Post1tompController::class,'findPostComment']);
+Route::get('findVideoComment',[Post1tompController::class,'findVideoComment']);
